@@ -21,16 +21,16 @@ const getFibonacciNumbers = (req, res) => {
 }
 
 const getGreatestCommonDivisor = (req, res) => {
-    console.log("gettin GCD" + req.params.number1 + " " + req.params.number2);
+    console.log("gettin GCD for :" + req.params.number1 + "&" + req.params.number2);
 
     const num1 = req.params.number1;
     const num2 = req.params.number2;
-  
-    const result = gcd(num1,num2);
+
+    const result = gcd(num1, num2);
     res.status(200).json(result);
 }
 
-const gcd = (num1,num2)=> {
+const gcd = (num1, num2) => {
     if (num2 === 0) {
         return num1;
     }
